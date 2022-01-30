@@ -16,9 +16,11 @@ describe('index.js', function () {
       it('appends a cat to the end of the cats array', function () {
         destructivelyAppendCat('Ralph');
 
+          cats.push('Ralph');
         expect(cats).to.have.ordered.members(["Milo", "Otis", "Garfield", "Ralph"]);
       });
     });
+  
 
     describe('destructivelyPrependCat(name)', function () {
       it('prepends a cat to the beginning of the cats array', function () {
